@@ -91,7 +91,7 @@ public class BinaryTree {
     }
 
     // Метод возвращающий строку содержащию ключи узлов дерева, после обхода сверху-вниз
-    public String traverseTopDown() {
+    public String traverseTopDown () {
         StringBuilder sb = new StringBuilder();
         traverseTopDownRec(root, sb);
         return sb.toString();

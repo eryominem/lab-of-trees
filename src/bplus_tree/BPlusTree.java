@@ -271,7 +271,7 @@ public class BPlusTree {
     }
 
     // Поиск по совпадению ключа в B+ дереве
-    public BPlusNode search(int key) {
+    public int search(int key) {
         BPlusNode curr = root;
         while (!curr.isLeaf) {
             int i = 0;
@@ -286,9 +286,9 @@ public class BPlusTree {
             i++;
         }
         if (i < curr.numKeys && key == curr.keys[i]) {
-            return curr;
+            return curr.keys[curr.numKeys - 1];
         }
-        return null;
+        return -1; // ненаход
     }
 
     // Слияние двух узлов B+ дерева

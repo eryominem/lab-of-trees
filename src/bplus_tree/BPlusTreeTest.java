@@ -15,5 +15,9 @@ public class BPlusTreeTest {
 
         System.out.println("\nОбход B+ дерева сверху-вниз");
         bPlusTree.traverse();
+
+        System.out.println("\nПоиск ключа в дереве по совпадению");
+        int found = bPlusTree.search(21);
+        System.out.println(found);
     }
 }
