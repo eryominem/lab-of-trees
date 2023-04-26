@@ -196,9 +196,10 @@ public class BPlusTree {
             System.out.println("Level: " + level);
             for (int i = 0; i < node.keys.length; i++) {
                 if (node.keys[i] != 0) {
-                    System.out.println("Key: " + node.keys[i]);
+                    System.out.print("Key: " + node.keys[i] + " ");
                 }
             }
+            System.out.println();
 
             if (!node.isLeaf) {
                 for (BPlusNode child : node.children) {
